@@ -51,6 +51,7 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 etCasa.setText(Casa.values()[i].getCasa());
+                ivDetailEscudo.setImageResource(Casa.values()[i].getEscudo());
             }
 
             @Override
