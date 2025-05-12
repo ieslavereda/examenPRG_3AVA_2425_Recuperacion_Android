@@ -61,11 +61,12 @@ public class DetailActivity extends AppCompatActivity {
 
         if(personaje!=null){
             ivDetailEscudo.setImageResource(personaje.getCasa().getEscudo());
-            etCasa.setText(personaje.getCasa().getCasa());
+            spinner.setSelection(personaje.getCasa().ordinal());
             etNombre.setEnabled(false);
             etNombre.setText(personaje.getNombre());
             buttonAceptar.setVisibility(INVISIBLE);
-
+            spinner.setEnabled(false);
+            spinner.setVisibility(INVISIBLE);
         }
 
         buttonCancelar.setOnClickListener(view -> {
